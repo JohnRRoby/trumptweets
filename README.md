@@ -81,10 +81,6 @@ df$term <- factor(df$term, levels = df$term[order(-df$occurrences)])
 
 df$term <- factor(df$term, levels = rev(levels(df$term)))
 
-#arrange descending
-
-#df <- arrange(df, desc(occurrences))
-
 #plot it
 
 p <- ggplot(subset(df, occurrences>=3), aes(term, occurrences))+
